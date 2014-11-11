@@ -15,12 +15,11 @@ VOID CPUclock::ReadTSC(DWORD *dwLo, DWORD *dwHi)
 	_asm
 	{
 		_emit    0x0F
-			_emit    0x31
-
-			mov      ecx, dword ptr dwLo
-			mov      dword ptr[ecx], eax
-			mov      ecx, dword ptr dwHi
-			mov      dword ptr[ecx], edx
+		_emit    0x31
+		mov      ecx, dword ptr dwLo
+		mov      dword ptr[ecx], eax
+		mov      ecx, dword ptr dwHi
+		mov      dword ptr[ecx], edx
 	}
 }
 

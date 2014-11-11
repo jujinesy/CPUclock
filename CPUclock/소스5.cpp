@@ -167,9 +167,10 @@ private:
 			// Interpret CPU brand string if reported
 			if (nExIds_ >= 0x80000004)
 			{
-				memcpy(brand, extdata_[2].data(), sizeof(cpui));
-				memcpy(brand + 16, extdata_[3].data(), sizeof(cpui));
-				memcpy(brand + 32, extdata_[4].data(), sizeof(cpui));
+				//memcpy(brand, extdata_[2].data(), sizeof(cpui));
+				//memcpy(brand + 16, extdata_[3].data(), sizeof(cpui));
+				//memcpy(brand + 32, extdata_[4].data(), sizeof(cpui));
+				memcpy(brand, extdata_[4].data(), sizeof(cpui));
 				brand_ = brand;
 			}
 		};
